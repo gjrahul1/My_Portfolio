@@ -25,7 +25,7 @@ const Hero = () => {
         
         {/* Tagline */}
         <p className="text-xl md:text-2xl text-neon-green font-semibold mb-6 tracking-wide">
-          Shipping AI & ML Solutions | Models · Pipelines · Agents · RAG
+          Building the Intelligence of Tomorrow
         </p>
         
         {/* Location */}
