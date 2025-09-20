@@ -3,20 +3,19 @@
 
 :root {
   /* Dark Theme Base */
-  --dark-primary: rgb(17, 17, 19);
+  --dark-primary: rgb(13, 13, 15);
   --dark-secondary: rgb(26, 28, 30);
   --dark-tertiary: rgb(38, 40, 42);
   
-  /* Text Hierarchy */
-  --light-primary: rgb(255, 255, 255);
-  --light-secondary: rgb(218, 218, 218);
-  --light-muted: rgb(161, 161, 170);
+  /* Improved Text Hierarchy - Softer than pure white */
+  --text-hero: rgb(229, 231, 235);        /* Light gray for headlines */
+  --text-body: rgb(191, 193, 196);        /* Comfortable reading gray */
+  --text-muted: rgb(154, 156, 159);       /* Lower hierarchy items */
   
-  /* New Light Green Accent System */
-  --neon-green: rgb(204, 255, 210);
-  --neon-green-hover: rgb(184, 235, 190);
-  --neon-green-pressed: rgb(164, 215, 170);
-  --neon-green-bg: rgba(204, 255, 210, 0.1);
+  /* Professional Accent System */
+  --accent-blue: rgb(58, 139, 255);       /* Brand blue for CTAs */
+  --mint-tint: rgb(196, 255, 215);        /* Mint for word cloud */
+  --mint-glow: rgba(159, 255, 189, 0.25); /* Reduced glow */
   
   /* Border System */
   --border-primary: rgb(63, 63, 63);
