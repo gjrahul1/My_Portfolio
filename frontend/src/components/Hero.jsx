@@ -1,16 +1,40 @@
-import React from 'react';
+import React, { useEffect, useState } from 'react';
 import { MapPin, Mail, Github, Linkedin } from 'lucide-react';
 
 const Hero = () => {
+  const [isVisible, setIsVisible] = useState(false);
+
+  useEffect(() => {
+    const observer = new IntersectionObserver(
+      ([entry]) => {
+        if (entry.isIntersecting) {
+          setIsVisible(true);
+        }
+      },
+      { threshold: 0.3 }
+    );
+
+    const heroElement = document.getElementById('hero-section');
+    if (heroElement) {
+      observer.observe(heroElement);
+    }
+
+    return () => {
+      if (heroElement) {
+        observer.unobserve(heroElement);
+      }
+    };
+  }, []);
+
   return (
-    <section className="relative min-h-screen flex items-center justify-center overflow-hidden">
+    <section id="hero-section" className="relative min-h-screen flex items-center justify-center overflow-hidden">
       {/* Background gradient effect */}
       <div className="absolute inset-0 bg-gradient-to-br from-dark-primary via-dark-secondary to-dark-primary"></div>
       
       {/* Neon glow effect */}
       <div className="absolute top-1/4 left-1/2 transform -translate-x-1/2 -translate-y-1/2 w-96 h-96 bg-neon-green opacity-5 rounded-full blur-3xl"></div>
       
-      <div className="relative z-10 text-center max-w-4xl mx-auto px-6">
+      <div className={`relative z-10 text-center max-w-4xl mx-auto px-6 transition-all duration-1000 ${isVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-10'}`}>
         {/* Avatar */}
         <div className="mb-8">
           <div className="w-32 h-32 mx-auto rounded-full bg-dark-tertiary border-2 border-neon-green/30 flex items-center justify-center text-4xl font-bold text-neon-green shadow-lg shadow-neon-green/20">
@@ -59,7 +83,7 @@ const Hero = () => {
         </div>
       </div>
       
-      {/* Scroll indicator - Removed for better alignment */}
+      {/* Removed scroll indicator for cleaner look */}
     </section>
   );
 };
