@@ -3,7 +3,7 @@ from motor.motor_asyncio import AsyncIOMotorDatabase, AsyncIOMotorClient
 import logging
 from datetime import datetime
 import os
-from ..models.blog_models import ContactMessage, ContactMessageCreate
+from models.blog_models import ContactMessage, ContactMessageCreate
 
 logger = logging.getLogger(__name__)
 
