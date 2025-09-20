@@ -186,7 +186,7 @@ button:focus {
 .btn-primary:hover {
   background: var(--neon-green-hover);
   transform: translateY(-1px);
-  box-shadow: 0 8px 25px rgba(218, 255, 1, 0.3);
+  box-shadow: 0 8px 25px rgba(204, 255, 210, 0.3);
 }
 
 .btn-primary:active {
