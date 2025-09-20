@@ -341,32 +341,26 @@ class PortfolioAPITester:
     def test_cors_headers(self):
         """Test CORS headers are properly set"""
         try:
-            response = requests.options(f"{self.backend_url}/blog/posts", timeout=10)
+            # Test with a proper GET request and check headers
+            response = requests.get(f"{self.backend_url}/blog/posts", timeout=10)
             headers = response.headers
             
-            cors_headers_present = (
-                'Access-Control-Allow-Origin' in headers or
-                'access-control-allow-origin' in headers
-            )
+            # Check for CORS headers (case-insensitive)
+            cors_origin = None
+            cors_credentials = None
             
-            if cors_headers_present:
-                self.log_test("CORS Headers", True, "CORS headers are properly configured")
+            for header_name, header_value in headers.items():
+                if header_name.lower() == 'access-control-allow-origin':
+                    cors_origin = header_value
+                elif header_name.lower() == 'access-control-allow-credentials':
+                    cors_credentials = header_value
+            
+            if cors_origin is not None:
+                self.log_test("CORS Headers", True, f"CORS headers properly configured: Origin={cors_origin}, Credentials={cors_credentials}")
                 return True
             else:
-                # Try a regular GET request to check CORS headers
-                response = requests.get(f"{self.backend_url}/blog/posts", timeout=10)
-                headers = response.headers
-                cors_headers_present = (
-                    'Access-Control-Allow-Origin' in headers or
-                    'access-control-allow-origin' in headers
-                )
-                
-                if cors_headers_present:
-                    self.log_test("CORS Headers", True, "CORS headers are properly configured")
-                    return True
-                else:
-                    self.log_test("CORS Headers", False, "CORS headers not found in response")
-                    return False
+                self.log_test("CORS Headers", False, "CORS headers not found in response")
+                return False
                     
         except Exception as e:
             self.log_test("CORS Headers", False, f"Request error: {str(e)}")
