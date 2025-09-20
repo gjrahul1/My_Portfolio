@@ -18,11 +18,11 @@ module.exports = {
         'light-secondary': 'rgb(218, 218, 218)',
         'light-muted': 'rgb(161, 161, 170)',
         
-        // Neon green accent system
-        'neon-green': 'rgb(218, 255, 1)',
-        'neon-green-hover': 'rgb(166, 190, 21)',
-        'neon-green-pressed': 'rgb(134, 155, 16)',
-        'neon-green-bg': 'rgba(218, 255, 1, 0.1)',
+        // Light green accent system
+        'neon-green': 'rgb(204, 255, 210)',
+        'neon-green-hover': 'rgb(184, 235, 190)',
+        'neon-green-pressed': 'rgb(164, 215, 170)',
+        'neon-green-bg': 'rgba(204, 255, 210, 0.1)',
         
         // Border colors
         'border-primary': 'rgb(63, 63, 63)',
