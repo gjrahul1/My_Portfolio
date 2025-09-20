@@ -42,20 +42,26 @@ body {
 .bg-dark-secondary { background-color: var(--dark-secondary); }
 .bg-dark-tertiary { background-color: var(--dark-tertiary); }
 
-.text-light-primary { color: var(--light-primary); }
-.text-light-secondary { color: var(--light-secondary); }
-.text-light-muted { color: var(--light-muted); }
+.text-hero { color: var(--text-hero); }
+.text-body { color: var(--text-body); }
+.text-muted { color: var(--text-muted); }
 
-.text-neon-green { color: var(--neon-green); }
-.bg-neon-green { background-color: var(--neon-green); }
-.border-neon-green { border-color: var(--neon-green); }
+.text-accent-blue { color: var(--accent-blue); }
+.text-mint-tint { color: var(--mint-tint); }
+.bg-accent-blue { background-color: var(--accent-blue); }
 
-/* Reduced Neon Glow Text Effect */
-.neon-glow-text {
+/* Reduced Glow Text Effect - Much More Subtle */
+.hero-glow-text {
   text-shadow: 
-    0 0 3px var(--neon-green),
-    0 0 6px var(--neon-green),
-    0 0 9px var(--neon-green);
+    0 0 2px var(--mint-glow),
+    0 0 4px var(--mint-glow);
+}
+
+/* Minimal glow for names and headings */
+.subtle-glow-text {
+  text-shadow: 
+    0 0 1px var(--mint-glow),
+    0 0 2px var(--mint-glow);
 }
 
 /* Smooth Scrolling */
