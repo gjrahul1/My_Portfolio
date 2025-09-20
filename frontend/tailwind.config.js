@@ -118,8 +118,8 @@ module.exports = {
         },
       },
       boxShadow: {
-        'neon': '0 0 5px rgb(218, 255, 1), 0 0 10px rgb(218, 255, 1), 0 0 15px rgb(218, 255, 1)',
-        'neon-lg': '0 0 10px rgb(218, 255, 1), 0 0 20px rgb(218, 255, 1), 0 0 30px rgb(218, 255, 1)',
+        'neon': '0 0 5px rgb(204, 255, 210), 0 0 10px rgb(204, 255, 210), 0 0 15px rgb(204, 255, 210)',
+        'neon-lg': '0 0 10px rgb(204, 255, 210), 0 0 20px rgb(204, 255, 210), 0 0 30px rgb(204, 255, 210)',
       },
       backdropBlur: {
         xs: '2px',
