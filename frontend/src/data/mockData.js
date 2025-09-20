@@ -2,18 +2,11 @@
 
 export const mockExperienceData = [
   {
-    position: "AI/ML Product Engineer",
+    position: "AI/ML Product Engineer • AI Developer Intern",
     company: "MNR Technologies Global Pvt Ltd",
     location: "Hyderabad, Telangana, India",
-    duration: "August 2025 - September 2025 (2 months)",
-    description: "Designed and developed end-to-end AI Pipelines and workflows"
-  },
-  {
-    position: "AI Developer Intern",
-    company: "MNR Technologies Global Pvt Ltd", 
-    location: "Hyderabad, Telangana, India",
-    duration: "June 2025 - July 2025 (2 months)",
-    description: "Designed and developed end-to-end AI Pipelines and workflows"
+    duration: "June 2025 - September 2025 (4 months)",
+    description: "Designed and developed end-to-end AI Pipelines and workflows. Progressed from intern to product engineer role, contributing to scalable AI system architecture and implementation."
   },
   {
     position: "Gen AI Intern",
