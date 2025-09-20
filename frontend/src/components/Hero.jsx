@@ -36,7 +36,7 @@ const Hero = () => {
         
         {/* Summary */}
         <div className="max-w-3xl mx-auto mb-12">
-          <p className="text-lg md:text-xl text-light-secondary leading-relaxed">
+          <p className="text-lg md:text-xl text-light-secondary leading-relaxed text-justify">
             AI/ML Product Engineer building production-grade AI systems across ML models, pipelines, and agentic AI. 
             Experienced with Generative AI, LLMs, and retrieval-augmented generation (RAG), with a focus on 
             scalability, reasoning, and clean system design. Passionate about delivering knowledge-driven 
