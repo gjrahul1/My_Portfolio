@@ -106,21 +106,21 @@ export const mockSkillsData = {
     { name: "Machine Learning", importance: 9 },
     { name: "Deep Learning", importance: 8 },
     { name: "LLMs", importance: 8 },
-    { name: "RAG", importance: 7 }
+    { name: "RAG", importance: 7 },
+    { name: "AI Agents", importance: 7 },
+    { name: "Design Patterns", importance: 6 },
+    { name: "System Design", importance: 6 }
   ],
   secondary: [
     { name: "TensorFlow", importance: 6 },
     { name: "PyTorch", importance: 6 },
-    { name: "Generative AI", importance: 7 },
-    { name: "MLOps", importance: 6 },
-    { name: "Data Science", importance: 7 }
+    { name: "MLOps", importance: 6 }
   ],
   tertiary: [
     { name: "Docker", importance: 5 },
     { name: "Kubernetes", importance: 5 },
     { name: "FastAPI", importance: 5 },
     { name: "React", importance: 4 },
-    { name: "Node.js", importance: 4 },
     { name: "MongoDB", importance: 4 },
     { name: "Git", importance: 5 },
     { name: "AWS", importance: 5 }
@@ -128,6 +128,7 @@ export const mockSkillsData = {
   lowCode: [
     { name: "AutoML", importance: 3 },
     { name: "No-Code ML", importance: 3 },
+    { name: "n8n", importance: 3 },
     { name: "Zapier", importance: 2 },
     { name: "Make.com", importance: 2 }
   ]
