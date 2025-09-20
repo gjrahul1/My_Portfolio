@@ -10,6 +10,10 @@ from typing import List
 import uuid
 from datetime import datetime
 
+# Import the new route modules
+from routes.blog_routes import router as blog_router
+from routes.contact_routes import router as contact_router
+
 
 ROOT_DIR = Path(__file__).parent
 load_dotenv(ROOT_DIR / '.env')
