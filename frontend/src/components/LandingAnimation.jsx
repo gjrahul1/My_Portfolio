@@ -86,21 +86,8 @@ const LandingAnimation = () => {
         {/* Supporting Sub-Copy */}
         {animationComplete && (
           <div className="animate-fade-in mb-12">
-            <p className="text-body text-xl md:text-2xl leading-relaxed opacity-90 max-w-3xl mx-auto mb-8">
-              We help teams convert raw data into real-time, revenue-driving AI systems.<br />
-              Start your transformation in less than four weeks.
-            </p>
-            
             {/* Primary CTA */}
             <div className="flex flex-col sm:flex-row items-center justify-center gap-6">
-              <button
-                onClick={scrollToContent}
-                className="px-10 py-4 bg-accent-blue text-white font-semibold rounded-lg hover:bg-blue-600 transition-all duration-300 hover:scale-105 hover:shadow-lg"
-                style={{ fontSize: '14px' }}
-              >
-                Get Started
-              </button>
-              
               {/* Secondary scroll cue */}
               <button
                 onClick={scrollToContent}
