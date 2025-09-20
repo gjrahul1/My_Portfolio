@@ -1,0 +1,19 @@
+# Core web framework
+fastapi
+
+# ASGI server for development and production with gunicorn
+uvicorn[standard]
+
+# WSGI HTTP Server for production
+gunicorn
+
+# MongoDB driver for Python
+pymongo
+
+# Google API client library for Blogger
+google-api-python-client
+google-auth-httplib2
+google-auth-oauthlib
+
+# For loading environment variables from a .env file
+python-dotenv
