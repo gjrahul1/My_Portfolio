@@ -53,8 +53,8 @@ const Skills = () => {
         
         <div className="mt-16 text-center">
           <p className="text-light-secondary text-lg">
-            <span className="text-neon-green font-semibold">Bigger text = Higher expertise</span> • 
-            Focus on full-code frameworks with low-code flexibility
+            <span className="text-neon-green font-semibold">Interactive Skills Cloud</span> • 
+            Hover to explore technologies and expertise areas
           </p>
         </div>
       </div>
