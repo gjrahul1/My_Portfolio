@@ -17,7 +17,7 @@ const Portfolio = () => {
       <Experience />
       <Skills />
       <Projects />
-      <Blog />
+      {/* <Blog /> */}
       <Education />
       <Contact />
       <Footer />
