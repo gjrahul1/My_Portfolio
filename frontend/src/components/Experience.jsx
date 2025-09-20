@@ -6,7 +6,7 @@ const Experience = () => {
   return (
     <section id="experience" className="py-20 px-6">
       <div className="max-w-6xl mx-auto">
-        <h2 className="text-4xl md:text-5xl font-bold text-center mb-16 neon-glow-text">
+        <h2 className="text-4xl md:text-5xl font-bold text-center mb-16 text-hero subtle-glow-text">
           Experience
         </h2>
         
