@@ -68,6 +68,14 @@ const Hero = () => {
           </p>
         </div>
         
+        {/* Call to Action */}
+        <div className="mb-12">
+          <a href="#experience" 
+             className="inline-block bg-accent-blue text-white font-bold py-3 px-8 rounded-lg text-lg hover:bg-blue-600 transition-colors duration-300 shadow-lg shadow-accent-blue/30">
+            Discover my Journey
+          </a>
+        </div>
+        
         {/* Social Links */}
         <div className="flex items-center justify-center space-x-6">
           <a href="mailto:opentowork0621@gmail.com" 
