@@ -7,8 +7,8 @@ const LandingAnimation = () => {
   const [animationComplete, setAnimationComplete] = useState(false);
   
   const fullText = 'From Insight to Actionable AI';
-  const typingSpeed = 100; // milliseconds per character
-  const cursorBlinkSpeed = 500; // milliseconds
+  const typingSpeed = 80; // Slightly faster for better UX
+  const cursorBlinkSpeed = 600;
 
   useEffect(() => {
     // Typing animation
@@ -43,45 +43,82 @@ const LandingAnimation = () => {
 
   return (
     <section className="relative min-h-screen flex items-center justify-center overflow-hidden">
-      {/* Background gradient effect */}
-      <div className="absolute inset-0 bg-gradient-to-br from-dark-primary via-dark-secondary to-dark-primary"></div>
+      {/* Subtle background texture */}
+      <div className="absolute inset-0 bg-dark-primary">
+        <div className="absolute inset-0 opacity-5 bg-gradient-to-br from-transparent via-mint-tint to-transparent"></div>
+      </div>
       
-      {/* Subtle background glow */}
-      <div className="absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 w-96 h-96 bg-neon-green opacity-3 rounded-full blur-3xl"></div>
+      {/* Improved hero glow - offset and reduced */}
+      <div 
+        className="absolute w-[480px] h-[480px] rounded-full blur-[180px] opacity-25"
+        style={{
+          background: '#9FFFBD',
+          top: '45%',
+          left: '55%',
+          transform: 'translate(-50%, -50%)'
+        }}
+      ></div>
       
-      <div className="relative z-10 text-center max-w-6xl mx-auto px-6">
-        {/* Animated Typing Text */}
-        <div className="mb-12">
-          <h1 className="text-4xl md:text-6xl lg:text-7xl font-black text-light-primary leading-tight">
+      <div className="relative z-10 text-center max-w-5xl mx-auto px-6">
+        {/* Improved Typography */}
+        <div className="mb-16">
+          <h1 className="font-black text-hero leading-tight hero-glow-text" style={{
+            fontSize: 'clamp(3.6rem, 8vw, 4.5rem)',
+            fontFamily: "'Inter', sans-serif",
+            fontWeight: 800,
+            lineHeight: 1.1
+          }}>
             <span className="inline-block">
-              {displayText}
+              From Insight
+              <br className="hidden md:inline" />
+              <span className="md:ml-2">to Actionable AI</span>
               <span 
-                className={`inline-block w-1 h-16 md:h-20 lg:h-24 bg-neon-green ml-2 ${showCursor ? 'opacity-100' : 'opacity-0'} transition-opacity duration-100`}
-                style={{ animation: 'blink 1s infinite' }}
+                className={`inline-block w-1 bg-accent-blue ml-2 ${showCursor ? 'opacity-100' : 'opacity-0'} transition-opacity duration-100`}
+                style={{ 
+                  height: 'clamp(3.6rem, 8vw, 4.5rem)',
+                  animation: 'blink 1s infinite'
+                }}
               ></span>
             </span>
           </h1>
         </div>
         
-        {/* Scroll indicator - appears after typing is complete */}
+        {/* Supporting Sub-Copy */}
         {animationComplete && (
-          <div className="animate-fade-in">
-            <button
-              onClick={scrollToContent}
-              className="group flex flex-col items-center space-y-4 mx-auto transition-all duration-300 hover:transform hover:scale-110"
-            >
-              <p className="text-light-secondary text-lg font-medium group-hover:text-neon-green transition-colors">
-                Discover My Journey
-              </p>
-              <div className="p-3 rounded-full border-2 border-neon-green/30 group-hover:border-neon-green group-hover:shadow-lg group-hover:shadow-neon-green/20 transition-all duration-300">
-                <ChevronDown className="w-6 h-6 text-neon-green animate-bounce" />
-              </div>
-            </button>
+          <div className="animate-fade-in mb-12">
+            <p className="text-body text-xl md:text-2xl leading-relaxed opacity-90 max-w-3xl mx-auto mb-8">
+              We help teams convert raw data into real-time, revenue-driving AI systems.<br />
+              Start your transformation in less than four weeks.
+            </p>
+            
+            {/* Primary CTA */}
+            <div className="flex flex-col sm:flex-row items-center justify-center gap-6">
+              <button
+                onClick={scrollToContent}
+                className="px-10 py-4 bg-accent-blue text-white font-semibold rounded-lg hover:bg-blue-600 transition-all duration-300 hover:scale-105 hover:shadow-lg"
+                style={{ fontSize: '14px' }}
+              >
+                Get Started
+              </button>
+              
+              {/* Secondary scroll cue */}
+              <button
+                onClick={scrollToContent}
+                className="group flex flex-col items-center space-y-2 transition-all duration-300 hover:transform hover:scale-110"
+              >
+                <span className="text-muted text-sm font-medium group-hover:text-accent-blue transition-colors">
+                  Discover My Journey
+                </span>
+                <div className="p-2 rounded-full border border-mint-tint/30 group-hover:border-accent-blue transition-all duration-300">
+                  <ChevronDown className="w-4 h-4 text-mint-tint animate-bounce group-hover:text-accent-blue" />
+                </div>
+              </button>
+            </div>
           </div>
         )}
       </div>
       
-      {/* Custom keyframes for cursor blink */}
+      {/* Custom keyframes */}
       <style jsx>{`
         @keyframes blink {
           0%, 50% { opacity: 1; }
@@ -100,7 +137,7 @@ const LandingAnimation = () => {
         }
         
         .animate-fade-in {
-          animation: fade-in 1s ease-out;
+          animation: fade-in 800ms ease-out;
         }
       `}</style>
     </section>
