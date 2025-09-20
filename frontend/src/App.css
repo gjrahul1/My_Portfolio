@@ -161,9 +161,9 @@ button:focus {
 @media (max-width: 768px) {
   .neon-glow-text {
     text-shadow: 
-      0 0 3px var(--neon-green),
-      0 0 6px var(--neon-green),
-      0 0 9px var(--neon-green);
+      0 0 2px var(--neon-green),
+      0 0 4px var(--neon-green),
+      0 0 6px var(--neon-green);
   }
 }
 
