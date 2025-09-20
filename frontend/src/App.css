@@ -51,13 +51,12 @@ body {
 .bg-neon-green { background-color: var(--neon-green); }
 .border-neon-green { border-color: var(--neon-green); }
 
-/* Neon Glow Text Effect */
+/* Reduced Neon Glow Text Effect */
 .neon-glow-text {
   text-shadow: 
-    0 0 5px var(--neon-green),
-    0 0 10px var(--neon-green),
-    0 0 15px var(--neon-green),
-    0 0 20px var(--neon-green);
+    0 0 3px var(--neon-green),
+    0 0 6px var(--neon-green),
+    0 0 9px var(--neon-green);
 }
 
 /* Smooth Scrolling */
