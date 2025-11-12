@@ -6,7 +6,7 @@ const LandingAnimation = () => {
   const [showCursor, setShowCursor] = useState(true);
   const [animationComplete, setAnimationComplete] = useState(false);
   
-  const fullText = 'From Insight to Actionable AI';
+  const fullText = 'From IS Grad to AI/ML Engineer';
   const typingSpeed = 80; // Slightly faster for better UX
   const cursorBlinkSpeed = 600;
 
