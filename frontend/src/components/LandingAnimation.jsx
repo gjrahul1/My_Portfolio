@@ -6,7 +6,7 @@ const LandingAnimation = () => {
   const [showCursor, setShowCursor] = useState(true);
   const [animationComplete, setAnimationComplete] = useState(false);
   
-  const fullText = 'From IS Grad to AI/ML Engineer';
+  const fullText = 'From ISE Grad to AI/ML Engineer';
   const typingSpeed = 80; // Slightly faster for better UX
   const cursorBlinkSpeed = 600;
 
@@ -68,13 +68,11 @@ const LandingAnimation = () => {
             fontWeight: 800,
             lineHeight: 1.1
           }}>
-            <span className="inline-block">
-              From Insight
-              <br className="hidden md:inline" />
-              <span className="md:ml-2">to Actionable AI</span>
-              <span 
+            <span className="inline-block whitespace-pre-wrap">
+              {displayText}
+              <span
                 className={`inline-block w-1 bg-accent-blue ml-2 ${showCursor ? 'opacity-100' : 'opacity-0'} transition-opacity duration-100`}
-                style={{ 
+                style={{
                   height: 'clamp(3.6rem, 8vw, 4.5rem)',
                   animation: 'blink 1s infinite'
                 }}
